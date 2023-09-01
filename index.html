@@ -12,9 +12,10 @@
 </head>
 <body>
     <header class="w-[90%] mx-auto mt-5">
+        <!-- nav bar -->
        <nav>
-<!-- nav bar -->
-<div class="flex gap-10 md:gap-0 flex-col md:flex-row md:justify-between items-center ">
+
+<div class="flex gap-10 lg:gap-0 flex-col lg:flex-row md:justify-between items-center ">
     <div class="">
   
  <img src="./Logo.png" alt="">
@@ -28,19 +29,34 @@
   </div>
         
        </nav>
+
        <hr class="mt-10 border-2">
     </header>
 
    <main class="w-[90%] mx-auto mt-10">
     <section>
         <!-- Category menu -->
-        <div id="category-container" class="flex justify-center space-x-4">
- 
+        <div id="category-container" class="flex justify-center gap-4  flex-wrap  space-y-4 items-center">
+
+        </div>
+       
+
+        <!-- No data found -->
+        <div id="no-content" class="flex mt-10 justify-center items-center "></div>
+    </section>
+
+    <section>
+        <!--  -->
+        <div class="card-container mt-10 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" id="card-container">
+
+           <!-- all card are here -->
 
         </div>
     </section>
 
    </main>
+
+
 
     <script src="./js/index.js"></script>
 </body>
