@@ -1,4 +1,5 @@
 const url = `https://openapi.programming-hero.com/api/videos/categories`;
+let = categoryid=1000;
  const handlerCategory = async() =>{
     const res = await fetch(url);
     const data = await res.json();
@@ -25,7 +26,7 @@ const loadCategoryData = async(categoryId) =>{
          const data = await res.json();
         //  console.log(data.data)
          const cards = data.data;
-
+categoryid = categoryId;
         //  if there is data then will call the function else will show no content 
          if(cards.length!==0){
             loadDataDisplay(cards);
@@ -62,7 +63,9 @@ const loadDataDisplay = (data) =>{
     div.innerHTML = `
     <div class="card card-compact   h-[300px]   bg-base-100 shadow-xl">
     <figure><img src="${item.thumbnail} class="" alt="Shoes" /></figure>
-     <div class= "text-right relative right-4 bottom-12"><span id="set-time" class="bg-black rounded-lg  text-center text-white p-2" >${item.others.posted_date?showTime(item.others.posted_date):""}</span></div>
+     <div class= "text-right relative right-4 bottom-12">
+     <span id="set-time" class="bg-black rounded-lg  text-center text-white p-2" >${item.others.posted_date?showTime(item.others.posted_date):""}</span>
+     </div>
     <!-- body part below image -->
     <div class="card-body">
       <div class="flex gap-4">
@@ -107,6 +110,24 @@ return `${hr} hrs ${min} min ago`;
 
 
 document.getElementById('sort-desending').addEventListener('click',function(){
-  const url =``
-  console.log('its working')
+  const url = `https://openapi.programming-hero.com/api/videos/category/${categoryid}`
+  
+ fetch(url)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  // const data =  res.json();
+  // console.log(categoryid)
+  // console.log(data.data)
+  
+ 
 })
+
+
+// (a, b) => parseFloat(b.others.views.split('K')[0]) - parseFloat(a.others.views.split('K')[0])
+
+
+
+// const sortContainer = document.getElementById('sort-contaniner');
+// const descending = sortData.sort((a, b) => b.others.views - a.others.views);
+// descending.forEach((sort) => {
+//     const p = document.createElement('p');

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- dasyui link -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<section class="lg:w-[50%] w-[90%] mt-20 mx-auto flex items-center ">
+<div class="space-y-4    border-r-4 border-l-4 border-green-600 pl-2 pr-2">
+
+    <!-- 1st query -->
+    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+        <div class="collapse-title text-xl font-medium">
+            Discuss the scope of var, let, and const
+        </div>
+        <div class="collapse-content"> 
+            <h2 class="text-center text-2xl">Var</h2>
+          <p class="mt-2"><span class="font-bold text-xl">i. </span> Variables  declared  with 'var' is function-scoped. When a variable is declared  with 'var' inside function, it will not access outside function.</p>
+          <p class="mt-2"><span class="font-bold text-xl">ii. </span> Variables declared  with 'var' are hoisted to the top of their containing function or global scope.</p>
+          <p class="mt-2"><span class="font-bold text-xl">iii. </span> Variables declared with 'var'  can reassigned and redelared within same scope.</p>
+          <h2 class="text-center text-2xl">Let</h2>
+          <p class="mt-2"><span class="font-bold text-xl">i. </span> Variables declared with 'let' are Block-scoped. When it declared inside any block like(if, loop, funtion etc.), it will not access outside the scope.  </p>
+          <p class="mt-2"><span class="font-bold text-xl">ii.</span> Variables declared with 'let' are hoisted, but not initialized. if we try to use before declaration it will show error!.</p>
+          <p class="mt-2"><span class="font-bold text-xl">iii. </span> Variables declared with 'let' can reassigned witin same block but can't redelare.</p>
+          <h2 class="text-center text-2xl">Const</h2>
+          <p class="mt-2"> <span class="font-bold text-xl">i. </span> Variables declared with 'const' are Block-scoped it will not access out side block-scope.</p>
+          <p class="mt-2"><span class="font-bold text-xl">ii. </span>  Variables declared with 'const' are hoisted but not initialized like 'let'. to use 'const' before declaration will show error.</p>
+          <p class="mt-2"><span class="font-bold text-xl">iii. </span> constant variable can't be changed after initialization.</p>
+        </div>
+      </div>
+<!-- 2nd query -->
+<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+    <div class="collapse-title text-xl font-medium">
+        Tell us the use cases of null and undefined
+    </div>
+    <div class="collapse-content"> 
+        <h2 class="text-center text-2xl">undefined</h2>
+      <p class="mt-2"><span class="font-bold text-xl">i. </span> When a variable declared but not initialized, it has default value 'undefined'. </p>
+      <p class="mt-2"><span class="font-bold text-xl">ii. </span> When a function does not return value it implicitly return 'undefined'. </p>
+      <p class="mt-2"><span class="font-bold text-xl">iii. </span> When  we try to access any object property and if does't exist it return 'undefined'. </p>
+      <h2 class="text-center text-2xl">null</h2>
+      <p class="mt-2"><span class="font-bold text-xl">i. </span>when we try to get the object value and if the value does not exist it return 'null' value.</p>
+      <p class="mt-2"><span class="font-bold text-xl">ii. </span>null can be use to comparisons to check if the variable or object property  are empty or not.</p>
+      
+    </div>
+  </div>
+  <!-- 3rd query -->
+  <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+    <div class="collapse-title text-xl font-medium">
+        What do you mean by REST API?
+    </div>
+    <div class="collapse-content"> 
+      <p class="mt-2">A REST API is a type of web service to communicate different software applicaton with each other over the internet by useing HTTP methods, like GET, PUT, POST, DELETE.</p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+</body>
+</html>
