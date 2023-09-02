@@ -64,7 +64,7 @@ const loadDataDisplay = (data) =>{
     <div class="card card-compact   h-[300px]   bg-base-100 shadow-xl">
     <figure><img src="${item.thumbnail} class="" alt="Shoes" /></figure>
      <div class= "text-right relative right-4 bottom-12">
-     <span id="set-time" class="bg-black rounded-lg  text-center text-white p-2" >${item.others.posted_date?showTime(item.others.posted_date):''}</span>
+     <span id="set-time" class="bg-black rounded-lg  text-center text-white " >${item.others.posted_date?showTime(item.others.posted_date):''}</span>
      </div>
     <!-- body part below image -->
     <div class="card-body">
