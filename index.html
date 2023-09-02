@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- fontawesome  -->
+<script src="https://kit.fontawesome.com/0499ecdc55.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header class="w-[90%] mx-auto mt-5">
@@ -21,7 +24,7 @@
  <img src="./Logo.png" alt="">
     </div>
     <div class=" ">
-        <a class="px-6 py-3 text-xl rounded-md bg-gray-200 font-medium">Sort by view</a>
+        <a id="sort-desending" class="px-6 py-3 text-xl rounded-md bg-gray-200 font-medium">Sort by view</a>
     </div>
     <div class="">
       <a class="px-6 py-3 text-xl rounded-md bg-[#FF1F3D] text-white">Blog</a>
@@ -36,13 +39,13 @@
    <main class="w-[90%] mx-auto mt-10">
     <section>
         <!-- Category menu -->
-        <div id="category-container" class="flex justify-center gap-4  flex-wrap  space-y-4 items-center">
+        <div id="category-container" class="flex justify-center gap-4  flex-wrap space-y-4 items-center">
 
         </div>
        
 
         <!-- No data found -->
-        <div id="no-content" class="flex mt-10 justify-center items-center "></div>
+        <div id="no-content" class="flex mt-10 justify-center items-center"></div>
     </section>
 
     <section>
