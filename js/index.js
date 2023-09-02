@@ -3,7 +3,7 @@ let = categoryid=1000;
  const handlerCategory = async() =>{
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data.data)
+    // console.log(data.data)
     const categories = data.data;
 
     // category append here
@@ -32,7 +32,7 @@ categoryid = categoryId;
             loadDataDisplay(cards);
             
          }else{
-            console.log('no data')
+            // console.log('no data')
             const cardContainer = document.getElementById('card-container');
             cardContainer.innerHTML="";
             const emptycard = document.getElementById('no-content');
@@ -64,7 +64,7 @@ const loadDataDisplay = (data) =>{
     <div class="card card-compact   h-[300px]   bg-base-100 shadow-xl">
     <figure><img src="${item.thumbnail} class="" alt="Shoes" /></figure>
      <div class= "text-right relative right-4 bottom-12">
-     <span id="set-time" class="bg-black rounded-lg  text-center text-white p-2" >${item.others.posted_date?showTime(item.others.posted_date):""}</span>
+     <span id="set-time" class="bg-black rounded-lg  text-center text-white p-2" >${item.others.posted_date?showTime(item.others.posted_date):''}</span>
      </div>
     <!-- body part below image -->
     <div class="card-body">
@@ -99,7 +99,7 @@ const loadDataDisplay = (data) =>{
 
 const showTime = (sec) =>{
 
-console.log(sec)
+// console.log(sec)
 
 const hr = Math.floor(sec/3600);
   const min = Math.floor(((sec/3600)-hr)*60)
@@ -114,13 +114,23 @@ document.getElementById('sort-desending').addEventListener('click',function(){
   
  fetch(url)
   .then(res => res.json())
-  .then(data => console.log(data))
-  // const data =  res.json();
-  // console.log(categoryid)
-  // console.log(data.data)
-  
- 
-})
+  .then(data => sortData(data.data))
+});
+
+
+// sort function
+
+const sortData = (data) =>{
+// console.log(data)
+if(data.length===0){
+  return;
+}else{
+  const newData = data.sort((a, b) => parseFloat(b.others.views.split('K')[0]) - parseFloat(a.others.views.split('K')[0]))
+  console.log(newData)
+  loadDataDisplay(newData)
+}
+
+};
 
 
 // (a, b) => parseFloat(b.others.views.split('K')[0]) - parseFloat(a.others.views.split('K')[0])
